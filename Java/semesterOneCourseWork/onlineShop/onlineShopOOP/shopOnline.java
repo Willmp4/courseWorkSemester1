@@ -9,7 +9,7 @@ package Java.semesterOneCourseWork.onlineShop.onlineShopOOP;
 import java.util.*;
 
 public class shopOnline {
-	static private Product[] items = new Product[8];// Creats an array of 7 spaces for the product type
+	static private Product[] items = new Product[8];// Creats an array of pp spaces for the product type
 	static private Product[] cart = new Product[items.length];// Creats an array of products length
 	static private int[] amount = new int[items.length];// Creats an array to show the amount of items entered
 	static private Scanner input = new Scanner(System.in);
