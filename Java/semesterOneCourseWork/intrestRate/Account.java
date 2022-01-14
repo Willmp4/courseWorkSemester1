@@ -3,80 +3,81 @@ package Java.semesterOneCourseWork.intrestRate;
 import java.time.LocalDateTime;
 
 public class Account {
-	private int nameID = 0;
-	private String fullName;
-	private double balance = 0;
-	private double annualInterestRate = 0;
-	private LocalDateTime dateCreated;
 
-	public Account(int nameID, double balance, String fullName) {
-		this.fullName = fullName;
-		this.nameID = nameID;
-		this.balance = balance;
-	}
+  private int nameID = 0;
+  private String fullName;
+  private double balance = 0;
+  private double annualInterestRate = 0;
+  private LocalDateTime dateCreated;
 
-	public Account() {
-		this.nameID = 0;
-		this.fullName = null;
-		this.annualInterestRate = 0;
-		this.balance = 0;
-		this.dateCreated = LocalDateTime.now();
-	}
+  public Account(int nameID, double balance, String fullName) {
+    this.fullName = fullName;
+    this.nameID = nameID;
+    this.balance = balance;
+  }
 
-	public String getFullName() {
-		return fullName;
-	}
+  public Account() {
+    this.nameID = 0;
+    this.fullName = null;
+    this.annualInterestRate = 0;
+    this.balance = 0;
+    this.dateCreated = LocalDateTime.now();
+  }
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
+  public String getFullName() {
+    return fullName;
+  }
 
-	public int getID() {
-		return nameID;
-	}
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
 
-	public void setID(int nameID) {
-		this.nameID = nameID;
-	}
+  public int getID() {
+    return nameID;
+  }
 
-	public double getInterestRate() {
-		return annualInterestRate;
-	}
+  public void setID(int nameID) {
+    this.nameID = nameID;
+  }
 
-	public void setInterestRate(double annualInterestRate) {
-		this.annualInterestRate = annualInterestRate;
-	}
+  public double getInterestRate() {
+    return annualInterestRate;
+  }
 
-	public double getBalance() {
-		return balance;
-	}
+  public void setInterestRate(double annualInterestRate) {
+    this.annualInterestRate = annualInterestRate;
+  }
 
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
+  public double getBalance() {
+    return balance;
+  }
 
-	public LocalDateTime getDate() {
-		return dateCreated;
-	}
+  public void setBalance(double balance) {
+    this.balance = balance;
+  }
 
-	public double calculateMonthlyInterest() {
-		double monthlyInterestRate = annualInterestRate / 12;
-		return this.balance * monthlyInterestRate;
-	}
+  public LocalDateTime getDate() {
+    return dateCreated;
+  }
 
-	public double addMonthlyInterest() {
-		return this.balance + calculateMonthlyInterest();
-	}
+  public double calculateMonthlyInterest() {
+    double monthlyInterestRate = annualInterestRate / 12;
+    return this.balance * monthlyInterestRate;
+  }
 
-	public void withdraw(double withAmt) {
-		this.balance -= withAmt;
-	}
+  public double addMonthlyInterest() {
+    return this.balance + calculateMonthlyInterest();
+  }
 
-	public void deposit(double depAmt) {
-		this.balance += depAmt;
-	}
+  public void withdraw(double withAmt) {
+    this.balance -= withAmt;
+  }
 
-	public double getMonthlyInterestRate() {
-		return annualInterestRate / 12;
-	}
+  public void deposit(double depAmt) {
+    this.balance += depAmt;
+  }
+
+  public double getMonthlyInterestRate() {
+    return annualInterestRate / 12;
+  }
 }
