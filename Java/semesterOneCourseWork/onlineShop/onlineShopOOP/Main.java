@@ -9,13 +9,13 @@ package Java.semesterOneCourseWork.onlineShop.onlineShopOOP;
  * They can discard an item.
  * When the user finishs it displays what they have bought and the total cost
  * shopping.
- * 
+ *
  * @author William Bruckmann p
  */
 public class Main {
-	public static void main(String[] args) {
-		shopOnline.shop();
-		shopOnline.giveReceipt();
-	}
 
+  public static void main(String[] args) {
+    Shop shop = new Shop();
+    shop.run();
+  }
 }

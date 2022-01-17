@@ -1,4 +1,4 @@
-package Java.semesterOneCourseWork.intrestRate;
+package Java.semesterOneCourseWork.interestRate;
 
 import java.time.LocalDateTime;
 
