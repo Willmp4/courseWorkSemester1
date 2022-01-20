@@ -6,6 +6,7 @@ package Java.semesterOneCourseWork.onlineShop.onlineShopOOP;
  * I nside of the store, there are 7 products that you can add to your
  * shopping cart.
  * Can show the shopping cart.
+
  * They can discard an item.
  * When the user finishs it displays what they have bought and the total cost
  * shopping.
