@@ -12,6 +12,10 @@ package Java.semesterOneCourseWork.voting.votingOOP;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * This is a programme that allows the user to enter names until they don't want to and then displays the string with the most entries.
+ * There is a tie breaker which will be prompted if there is more than one voter with the same amount of votes.
+ */
 public class Main {
 
   public static void main(String[] args) {

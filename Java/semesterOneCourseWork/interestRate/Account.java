@@ -14,7 +14,7 @@ public class Account {
     this.fullName = fullName;
     this.nameID = nameID;
     this.balance = balance;
-  }
+  } //This is the constructor
 
   public Account() {
     this.nameID = 0;
@@ -22,62 +22,58 @@ public class Account {
     this.annualInterestRate = 0;
     this.balance = 0;
     this.dateCreated = LocalDateTime.now();
-  }
+  } //This is the default Account() constructor
 
   public String getFullName() {
     return fullName;
-  }
+  } //Return name
 
   public void setFullName(String fullName) {
     this.fullName = fullName;
-  }
+  } //Set name
 
   public int getID() {
     return nameID;
-  }
+  } //Return NameId
 
   public void setID(int nameID) {
     this.nameID = nameID;
-  }
+  } //Set ID
 
   public double getInterestRate() {
     return annualInterestRate;
-  }
+  } //Return the annual Interest rate
 
   public void setInterestRate(double annualInterestRate) {
     this.annualInterestRate = annualInterestRate;
-  }
+  } //Set the annual interest rate
 
   public double getBalance() {
     return balance;
-  }
+  } //Return balance
 
   public void setBalance(double balance) {
     this.balance = balance;
-  }
+  } //Set balance
 
   public LocalDateTime getDate() {
     return dateCreated;
-  }
+  } //return type date
 
   public double calculateMonthlyInterest() {
     double monthlyInterestRate = annualInterestRate / 12;
     return this.balance * monthlyInterestRate;
-  }
-
-  public double addMonthlyInterest() {
-    return this.balance + calculateMonthlyInterest();
-  }
+  } //Return the monthly interest rate
 
   public void withdraw(double withAmt) {
     this.balance -= withAmt;
-  }
+  } //Take away some amount from balance
 
   public void deposit(double depAmt) {
     this.balance += depAmt;
-  }
+  } // add some amount to balance
 
   public double getMonthlyInterestRate() {
     return annualInterestRate / 12;
-  }
+  } //Return monthly interest rate
 }

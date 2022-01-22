@@ -1,7 +1,12 @@
 public class Main {
 
+  /**
+   *
+   * This is a programme to create a bank and set some variables using getters and setters to create new accounts
+   */
+
   public static void main(String[] args) {
-    bank myBank = new bank("Will's Savings Bank");
+    Bank myBank = new Bank("Will's Savings Bank");
 
     myBank.run();
   }

@@ -2,6 +2,12 @@ package Java.semesterOneCourseWork.bmiCalc;
 
 import java.util.Scanner;
 
+/**
+ * This is a programme to calculate a BMI result for the user. The programme takes in two inputs(weight and height). And using
+ * either the imperial system or the metric system and using the respective formulas.
+ * @author William Bruckmann
+ */
+
 public class bmiSimpleTerminal {
 
   public static void main(String[] args) {
@@ -12,15 +18,13 @@ public class bmiSimpleTerminal {
     System.out.println("");
     System.out.println("Enter 1 for in pounds/inches or 2 for Kg/Meters");
 
-    while (!sc.hasNextInt()) {
-      sc.next();
-      System.out.println("Please enter a vaild number");
-    }
-
     while (true) {
+      while (!sc.hasNextInt()) {
+        sc.next();
+        System.out.println("Please enter a vaild number");
+      }
+      int UserInput = sc.nextInt();
       // Will ask the user to keep entering numbers until the input is a 1 or 2
-      int UserInput;
-      UserInput = sc.nextInt();
       if (UserInput == 1) {
         CalcBMImethodOne();
         break;

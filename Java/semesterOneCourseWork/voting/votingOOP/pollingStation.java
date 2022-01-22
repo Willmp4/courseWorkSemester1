@@ -1,14 +1,13 @@
 package Java.semesterOneCourseWork.voting.votingOOP;
 
 /**
- * This is the logic for using voter -> Would be the controller in a Model - Controller - view structer
- * It has methodes to:
+ * This is the logic for using voter -> Would be the controller in a Model - Controller - view structure
+ * It has method's to:
  * addToList -> to check weather the input has been entered before
  * tie -> To check weather there is a tie, meaning there is more than one voter with the same numOfVotes
  * getMostVotes -> To display the voter with the most numOfVotes based on weather there is a tie or not
  */
 import java.util.*;
-import javafx.css.StyleableStringProperty;
 
 public class pollingStation {
 
@@ -21,15 +20,15 @@ public class pollingStation {
    * @param names
    *              !Wasn't able to find a way to only use one param and check if
    *              voter is in the voter ArrayList
-   *              Methode to init a voter object (to be used in a while loop) ->
-   *              uses voter no args consructor create object -> asks user for
+   *              Methods to init a voter object (to be used in a while loop) ->
+   *              uses voter no args constructor create object -> asks user for
    *              input using .setName()->Uses scanner from .util
    *
-   *              If statment check weather @param names has the user input as one
+   *              If statement check weather @param names has the user input as one
    *              of the elements(.contains())
    *
    *              If (false)->
-   *              there is no element from getName() equal to one insdie @param
+   *              there is no element from getName() equal to one inside @param
    *              names
    *              Then set numOfVotes to 1 -> add this voter object to @param list
    *              -> add getName() to @param names
@@ -37,9 +36,9 @@ public class pollingStation {
    *              If true->
    *              Use a for loop to check which @param list.get(i).getName()
    *              from @param list
-   *              .get(j) accesses the positon of the @param list which is a voter
-   *              object meaning the .getters() and .setters() can be implamented
-   *              .setNumOfVotes() incraments the element which was equal to the
+   *              .get(j) accesses the position of the @param list which is a voter
+   *              object meaning the .getters() and .setters() can be implemented
+   *              .setNumOfVotes() increments the element which was equal to the
    *              newly instantiated object voter.getName()
    *
    */
@@ -63,10 +62,10 @@ public class pollingStation {
   /**
    * @param list
    * @return boolean
-   *         !This methode will check the elements more than once which is not
-   *         effecient
-   *         Sets maxNum useing methode getMostVostes()
-   *         Methode that uses two for loops to check every element of int type
+   *         !This method will check the elements more than once which is not
+   *         efficient
+   *         Sets maxNum using methods getMostVotes()
+   *         Method that uses two for loops to check every element of int type
    *         from getNumOfVotes()
    *         If any element match in @param list and that match is greater than
    *         maNum
@@ -91,7 +90,7 @@ public class pollingStation {
   /**
    * @param list
    * @return int maxNum
-   *         Methode to @return the maxNum of votes within @param list
+   *         Method to @return the maxNum of votes within @param list
    *         The first for loop is to find the maxNum by setting a temp variable
    *         to each of the numOfVotes and comparing it to the current maxNUm
    *         e.g list[1,4,3,7,6]
@@ -120,7 +119,7 @@ public class pollingStation {
    * @param list
    *             Use for loop to find which maxNum == one of the voter objects
    *             in @param list
-   *             Then diplay the matching objects atrributes
+   *             Then display the matching objects attributes
    */
   private void showWinner(ArrayList<voter> list) {
     int maxNum = getMostVotes(list);
@@ -136,7 +135,7 @@ public class pollingStation {
   }
 
   /**
-   * This is the main methode
+   * This is the main method
    * Does not take any command line args
    *
    * Runs addToList() with the two args of @param typeProductList and @param
@@ -150,14 +149,10 @@ public class pollingStation {
    * if no -> display the winners using a for loop
    * check if there is a tie in @param list
    *
-   * if true -> set x to the maxNum
-   * and then ->
-   * displays the newly inputed name and maxNum +1
-   * !There is no check to see if the new entry is in the @param list of voter
-   * objects ->
-   * !If there is a tie the user could enter a string not in @param list that
-   * would be displayed
-   *
+   * if tie() true -> set x to the maxNum
+   * and then -> print(there has been a tie)
+   * Then -> uses a while loop to make sure that the new entry is in the array of names
+   * displays the newly inputted name and maxNum +1
    * if false-> then display the winner
    */
   public void voting() {
